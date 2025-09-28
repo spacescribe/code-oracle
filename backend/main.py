@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Query
+from fastapi.middleware.cors import CORSMiddleware
 from meilisearch import Client
 from git import Repo
 import os
@@ -8,6 +9,14 @@ from pydantic import BaseModel
 client = Client("http://127.0.0.1:7700")
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],   # 👈 allow all origins
+    allow_credentials=True,
+    allow_methods=["*"],   # allow all HTTP methods (GET, POST, etc.)
+    allow_headers=["*"],   # allow all headers
+)
 
 INDEX_NAME = "code_base"
 
