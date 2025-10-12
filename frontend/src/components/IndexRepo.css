@@ -1,0 +1,44 @@
+.index-repo-container {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #fafafa;
+}
+
+.index-repo-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.index-repo-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+}
+
+.index-repo-form button {
+  padding: 10px 16px;
+  background-color: #4b56d2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.index-repo-form button:hover {
+  background-color: #3a45b0;
+}
+
+.success {
+  color: green;
+  margin-top: 8px;
+}
+
+.error {
+  color: red;
+  margin-top: 8px;
+}
